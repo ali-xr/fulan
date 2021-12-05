@@ -1,8 +1,12 @@
 # fulan
 
-## Backend
-https://github.com/Muhammadsodiqq/fulan_backend
+# Video Presentation App </br>
 
-## Frontend (Admin Panel)
+# https://youtu.be/7UfZr0i3QZs </br>
 
-https://github.com/MuhammadSiddiq-pyxel/fulan-admin
+## Backend </br>
+# https://github.com/Muhammadsodiqq/fulan_backend </br>
+
+## Frontend (Admin Panel) </br>
+
+# https://github.com/MuhammadSiddiq-pyxel/fulan-admin </br>
