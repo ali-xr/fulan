@@ -1,6 +1,6 @@
-# fulanapp
+# Fulan App 
 
-A new Flutter project.
+# Click this link to watch the youtube video: https://youtu.be/7UfZr0i3QZs
 
 ## Getting Started
 
