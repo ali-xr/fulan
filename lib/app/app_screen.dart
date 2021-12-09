@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fulanapp/size_config.dart';
 import 'package:fulanapp/variables/variables.dart';
-import 'package:fulanapp/widgets/custom_bottom_navigation_bar.dart';
 
 class AppScreen extends StatelessWidget {
   AppScreen({Key? key}) : super(key: key);

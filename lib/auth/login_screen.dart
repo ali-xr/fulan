@@ -233,29 +233,33 @@ class _CheckPhoneNumberScreenState extends State<CheckPhoneNumberScreen> {
                 ),
                 child: SizedBox(
                   height: getProportionScreenHeight(60.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      primary: const Color.fromRGBO(15, 15, 84, 1),
-                    ),
-                    child: Text(
-                      "Kirish",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: getProportionScreenWidth(20.0),
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: -0.1,
-                      ),
-                    ),
-                    onPressed: () {
-                      _checkValidate();
-                      if (_formKey.currentState!.validate()) {
-                        singIn(_phone, _pass);
-                      } else {}
-                    },
-                  ),
+                  child: !isLoading
+                      ? ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            primary: const Color.fromRGBO(15, 15, 84, 1),
+                          ),
+                          child: Text(
+                            "Kirish",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: getProportionScreenWidth(20.0),
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: -0.1,
+                            ),
+                          ),
+                          onPressed: () {
+                            _checkValidate();
+                            if (_formKey.currentState!.validate()) {
+                              singIn(_phone, _pass);
+                            }
+                          },
+                        )
+                      : const Center(
+                          child: CircularProgressIndicator(),
+                        ),
                 ),
               ),
             ),
@@ -293,7 +297,7 @@ class _CheckPhoneNumberScreenState extends State<CheckPhoneNumberScreen> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => EndScreen(),
+          builder: (context) =>const EndScreen(),
         ),
       );
     } else {

@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fulanapp/size_config.dart';
@@ -17,7 +16,7 @@ class InvestorHome extends StatefulWidget {
 class _InvestorHomeState extends State<InvestorHome> {
   bool _isLoading = false;
 
-  dynamic _student = null;
+  dynamic _student;
 
   @override
   void initState() {
@@ -41,7 +40,6 @@ class _InvestorHomeState extends State<InvestorHome> {
               ? Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: ListView(
-                    physics: const BouncingScrollPhysics(),
                     children: [
                       Row(
                         children: [

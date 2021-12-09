@@ -1,19 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:fulanapp/auth/login_screen.dart';
 import 'package:fulanapp/investor/student_item.dart';
 import 'package:fulanapp/variables/variables.dart';
 import 'package:grouped_list/grouped_list.dart';
 import 'package:http/http.dart' as http;
-
-List _elements = [
-  {'name': 'John', 'group': 'December 5'},
-  {'name': 'Will', 'group': 'December 3'},
-  {'name': 'Beth', 'group': 'December 5'},
-  {'name': 'Miranda', 'group': 'December 3'},
-  {'name': 'Mike', 'group': 'November 29'},
-  {'name': 'Danny', 'group': 'November 27'},
-];
 
 class Investor extends StatefulWidget {
   const Investor({Key? key}) : super(key: key);
@@ -40,11 +32,22 @@ class _InvestorState extends State<Investor> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const CheckPhoneNumberScreen(),
+              ),
+              (Route<dynamic> route) => false,
+            );
+          },
+          child:const Icon(Icons.logout),
+        ),
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -63,10 +66,12 @@ class _InvestorState extends State<Investor> {
             : _students.isNotEmpty
                 ? GroupedListView<dynamic, String>(
                     elements: _students,
-                    groupBy: (student) => '${DateTime.parse(student['createdAt']).day}/${DateTime.parse(student['createdAt']).month}/${DateTime.parse(student['createdAt']).year}',
+                    groupBy: (student) =>
+                        '${DateTime.parse(student['createdAt']).day}/${DateTime.parse(student['createdAt']).month}/${DateTime.parse(student['createdAt']).year}',
                     groupComparator: (value1, value2) =>
                         value2.compareTo(value1),
-                    itemComparator: (item1, item2) => item1['user_name'].compareTo(
+                    itemComparator: (item1, item2) =>
+                        item1['user_name'].compareTo(
                       item2['user_name'],
                     ),
                     order: GroupedListOrder.DESC,
@@ -102,7 +107,8 @@ class _InvestorState extends State<Investor> {
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 20.0, vertical: 10.0),
                             leading: const Icon(Icons.account_circle),
-                            title: Text('${element['user_name']} ${element['user_lastName']}'),
+                            title: Text(
+                                '${element['user_name']} ${element['user_lastName']}'),
                             trailing: const Icon(Icons.arrow_forward),
                           ),
                         ),
@@ -122,7 +128,7 @@ class _InvestorState extends State<Investor> {
     });
 
     final response = await http.get(
-      Uri.parse('https://fulan-back.herokuapp.com/users'),
+      Uri.parse('https://fulan-back.herokuapp.com/users/'),
       headers: {
         'Authorization': Variables.userToken!,
       },

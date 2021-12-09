@@ -117,7 +117,7 @@ class _InputNameScreenState extends State<InputNameScreen> {
                               });
                             },
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           TextFormField(
@@ -161,7 +161,7 @@ class _InputNameScreenState extends State<InputNameScreen> {
                               });
                             },
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           TextFormField(
@@ -215,7 +215,7 @@ class _InputNameScreenState extends State<InputNameScreen> {
                               }
                             },
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           TextFormField(
@@ -312,8 +312,9 @@ class _InputNameScreenState extends State<InputNameScreen> {
                     onPressed: () {
                       _checkValidate();
 
-                      if (_formKey.currentState!.validate())
+                      if (_formKey.currentState!.validate()) {
                         singUp(_name, _surname, _phone, _pass);
+                      }
                     },
                   ),
                 ),

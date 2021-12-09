@@ -4,7 +4,6 @@ import 'package:fulanapp/auth/login_screen.dart';
 import 'package:fulanapp/auth/registor.dart';
 import 'package:fulanapp/home/student_home_page.dart';
 import 'package:fulanapp/investor/investor_screen.dart';
-import 'package:fulanapp/investor/student_item.dart';
 import 'package:fulanapp/splash/splash_screen.dart';
 import 'package:fulanapp/variables/variables.dart';
 import 'package:shared_preferences/shared_preferences.dart';

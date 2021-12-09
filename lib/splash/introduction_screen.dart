@@ -22,18 +22,7 @@ class IntroductionScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(
-              child: Text(
-                "Haqiqiy quvonchni\nkashf eting",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: getProportionScreenWidth(36.0),
-                  fontWeight: FontWeight.w800,
-                  height: 1.4,
-                  letterSpacing: -0.1,
-                ),
-              ),
-            ),
+            
             SizedBox(height: getProportionScreenHeight(12.0)),
             Text(
               "Dunyoga mashhur, bestseller asarlarning audio kitoblarini istalgan vaqtda, istalgan joyda audio tarzda fulanappshingiz va elektron kitob shaklida o’qishingiz mumkin. Ro’yxatdan o’ting va zavqlaning.",

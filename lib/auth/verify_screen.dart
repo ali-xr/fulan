@@ -189,7 +189,7 @@ class RegistorVerifySmsState extends State<RegistorVerifySms> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => EndScreen()));
+                                builder: (context) =>const EndScreen()));
                       },
                       child: Text(
                         "Ro`yxatdan o`tish",
@@ -281,7 +281,7 @@ class RegistorVerifySmsState extends State<RegistorVerifySms> {
     } else {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => EndScreen()),
+        MaterialPageRoute(builder: (context) =>const EndScreen()),
       );
     }
   }

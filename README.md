@@ -1,12 +1,16 @@
-# fulan
+# fulanapp
 
-# Video Presentation App </br>
+A new Flutter project.
 
-# https://youtu.be/7UfZr0i3QZs </br>
+## Getting Started
 
-## Backend </br>
-# https://github.com/Muhammadsodiqq/fulan_backend </br>
+This project is a starting point for a Flutter application.
 
-## Frontend (Admin Panel) </br>
+A few resources to get you started if this is your first Flutter project:
 
-# https://github.com/MuhammadSiddiq-pyxel/fulan-admin </br>
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

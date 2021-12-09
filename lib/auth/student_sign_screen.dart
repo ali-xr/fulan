@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fulanapp/constants.dart';
 import 'package:fulanapp/home/student_home_page.dart';
 import 'package:fulanapp/size_config.dart';
-import 'package:fulanapp/widgets/custom_app_bar.dart';
 
 class StudentSignScreen extends StatefulWidget {
   @override
@@ -84,7 +83,7 @@ class _StudentState extends State<StudentSignScreen> {
                           });
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       TextFormField(
@@ -128,13 +127,12 @@ class _StudentState extends State<StudentSignScreen> {
                           _oqish = text2!;
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       TextFormField(
                         cursorWidth: getProportionScreenWidth(1.0),
                         keyboardType: TextInputType.name,
-                        obscureText: true,
                         style: const TextStyle(
                           fontWeight: FontWeight.w600,
                           letterSpacing: -0.1,
@@ -172,7 +170,7 @@ class _StudentState extends State<StudentSignScreen> {
                         },
                         onTap: () {},
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       TextFormField(
@@ -217,51 +215,51 @@ class _StudentState extends State<StudentSignScreen> {
                           });
                         },
                       ),
-                      Positioned(
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                            vertical: getProportionScreenHeight(40.0),
-                            horizontal: getProportionScreenWidth(24.0),
-                          ),
-                          child: SizedBox(
-                            height: getProportionScreenHeight(60.0),
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                primary: const Color.fromRGBO(15, 15, 84, 1),
-                              ),
-                              child: Text(
-                                "Kirish",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: getProportionScreenWidth(20.0),
-                                  fontWeight: FontWeight.w600,
-                                  letterSpacing: -0.1,
-                                ),
-                              ),
-                              onPressed: () {
-                                Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const StudentHome(),
-                                  ),
-                                  (Route<dynamic> route) => false,
-                                );
-                              },
-                            ),
-                          ),
-                        ),
-                      ),
                     ],
                   ),
                 ),
               ),
             ],
+          ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: getProportionScreenHeight(40.0),
+                horizontal: getProportionScreenWidth(24.0),
+              ),
+              child: SizedBox(
+                height: getProportionScreenHeight(60.0),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    primary: const Color.fromRGBO(15, 15, 84, 1),
+                  ),
+                  child: Text(
+                    "Kirish",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: getProportionScreenWidth(20.0),
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: -0.1,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const StudentHome(),
+                      ),
+                      (Route<dynamic> route) => false,
+                    );
+                  },
+                ),
+              ),
+            ),
           ),
         ],
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fulanapp/size_config.dart';
-import 'package:fulanapp/variables/variables.dart';
 
 // ignore: must_be_immutable
 class CollectionWidget extends StatelessWidget {

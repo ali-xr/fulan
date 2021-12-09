@@ -139,7 +139,7 @@ class _HammasiTayyorState extends State<EndScreen> {
                         Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Investor(),
+                            builder: (context) =>const Investor(),
                           ),
                           (Route<dynamic> route) => false,
                         );
