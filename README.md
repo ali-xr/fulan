@@ -1,4 +1,4 @@
-# Fulan App 
+# Fulan 
 
 # Click this link to watch the youtube video: https://youtu.be/7UfZr0i3QZs
 
